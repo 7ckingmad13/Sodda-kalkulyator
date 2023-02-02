@@ -1,0 +1,15 @@
+.box {
+    background-color: lavender;
+    width: fit-content;
+    border: 5px solid steelblue;
+    padding: 60px;
+    margin: 20px;
+}
+
+.btns:focus {
+    background-color: lightgreen;
+}
+
+.btns:active {
+    background-color: lightgreen;
+}
