@@ -1,0 +1,66 @@
+<!-- Ushbu code Rustambek Jumayev tomonidan yaratilgan -->
+<!-- https://github.com/7ckingmad13 -->
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sodda kalkulyator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body style="background-color:lemonchiffon;">
+
+    <center>
+        <!-- inputlar uchun alohida div ochib olamiz -->
+        <div class="box">
+            <div>
+                <input id="num1" type="number" class="number1" placeholder="Raqam kiriting"
+                    style="border-radius: 10px; background-color: lightblue; text-align: center;">
+                <input id="num2" type="number" class="number2" placeholder="Raqam kiriting"
+                    style="border-radius: 10px; background-color: lightblue; text-align: center;"><br><br>
+            </div>
+        <!-- matematik amallar uchun buttonlar yaratib olamiz -->
+            <div id="operator_btns">
+                <button class="btns" id="plus" style="border-radius: 15px;" onclick="x='+'">+</button>
+                <button class="btns" id="minus" style="border-radius: 15px;" onclick="x='-'">-</button>
+                <button class="btns" id="times" style="border-radius: 15px;" onclick="x='*'">x</button>
+                <button class="btns" id="divide" style="border-radius: 15px;" onclick="x='/'">:</button>
+            </div> <br>
+
+            <button style="border-radius: 15px; font-family: 'Courier New', Courier, monospace;"
+                onclick="hisoblash()">Hisoblash</button>
+
+            <p id="natijalar" class="natijasi"></p>
+        </div>
+    </center>
+
+    <script>
+        let x;
+
+        function hisoblash() {
+            let natijaUmumiy;
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            switch (x) {
+                case '+':
+                    natijaUmumiy = num1 + num2;
+                    break;
+                case '-':
+                    natijaUmumiy = num1 - num2;
+                    break;
+                case '*':
+                    natijaUmumiy = num1 * num2;
+                    break;
+                case '/':
+                    natijaUmumiy = num1 / num2;
+                default:
+                    alert("Siz amalni tanlamadingiz")
+            }
+            document.getElementById("natijalar").innerHTML = natijaUmumiy;
+        }
+    </script>
+
+</body>
+
+</html>
